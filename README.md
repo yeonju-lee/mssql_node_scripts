@@ -6,7 +6,8 @@ db 용량을 채우기 위한 방법
 
 ```
 npm install
-npm install tedious
+npm install mssql
+npm install async-foreach
 
 
 # create hello database
@@ -29,5 +30,6 @@ node run_query.js [ip] [port] [id] [pw] [query]
 ```
 # check the database size
 node run_query.js [ip] [port] [id] [password] 'SELECT table_schema AS "Database", ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS "Size (MB)" FROM information_schema.TABLES GROUP BY table_schema;'
+
 
 ```
