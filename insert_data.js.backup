@@ -1,0 +1,70 @@
+// https://github.com/mysqljs/mysql
+
+const args = process.argv;
+const ip = args[2];
+const port = args[3];
+const user = args[4];
+const pw = args[5];
+const iter = args[6];
+
+var sql = require("mssql");
+
+var config = {
+	server: ip,
+	database :"hello",
+	connectionTimeout: 0,
+    requestTimeout: 0,
+	authentication: {
+      type: "default",
+      options: {  
+      userName: user,
+	  password: pw,
+	  port: port
+	}
+    }
+  };
+	
+	var forEach = require('async-foreach').forEach;
+	var fs = require('fs');
+	
+	var sqlinfo = fs.readFileSync("./sql/data_big.sql"); 
+	var query = sqlinfo.toString();
+	var fruits = [];
+	
+	for(var i = 0; i < iter; i++) {
+	fruits.push("data_big.sql");		// file size: 68MB
+}
+	
+	
+	  sql.connect(config, function (err) {
+    
+        if(err) {
+            console.log("Database connection is not established: \n"+err);
+            process.exit(0);
+        } 
+
+        // create Request object
+        var request = new sql.Request();
+           
+        // query to the database and get the records
+		
+	  forEach(fruits, function(item, index, arr) {
+        request.query(query , function (err, rowCount) {
+            
+        if (err) {
+        console.log(err);
+      } else {
+        console.log(rowCount + ' rows');
+		sql.close();
+      } 
+	  
+});
+				
+    });
+	
+		
+	});
+
+
+	console.log("insert.");
+	

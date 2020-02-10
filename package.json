@@ -1,0 +1,19 @@
+{
+  "name": "mssql_node_scripts",
+  "version": "1.0.0",
+  "description": "db 용량을 채우기 위한 방법",
+  "main": "create_database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeonju-lee/mssql_node_scripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeonju-lee/mssql_node_scripts/issues"
+  },
+  "homepage": "https://github.com/yeonju-lee/mssql_node_scripts#readme"
+}
