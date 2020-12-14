@@ -1,5 +1,6 @@
+
 use master;
 
-DROP DATABASE IF EXISTS hello;
+DROP DATABASE IF EXISTS myTable;
 
-create database hello;
+create database myTable;

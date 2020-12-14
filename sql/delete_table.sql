@@ -1,0 +1,5 @@
+USE master;
+
+DROP TABLE IF EXISTS myTable;
+
+DROP DATABASE IF EXISTS myTable;

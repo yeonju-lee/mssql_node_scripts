@@ -1,8 +1,10 @@
+USE master;
+
 DROP TABLE IF EXISTS myTable;
 
-use hello;
+use myTable;
 
-create table hello (
+create table myTable (
   id INT NOT NULL identity(1,1) PRIMARY KEY,
   a varchar(255) NOT NULL,
   b varchar(255) NOT NULL,
@@ -14,4 +16,4 @@ create table hello (
 
 SET QUOTED_IDENTIFIER OFF;
 
-INSERT INTO hello (a,b,c,d,address,word) VALUES ("Brady","Mon, 8th, 2018","Sociis Natoque Penatibus Institute","$00,000.00","P.O. Box 899, 7685 Sit St.","sem, vitae aliquam eros turpis non enim. Mauris quis turpis");
+INSERT INTO myTable (a,b,c,d,address,word) VALUES ("Brady","Mon, 8th, 2018","Sociis Natoque Penatibus Institute","$00,000.00","P.O. Box 899, 7685 Sit St.","sem, vitae aliquam eros turpis non enim. Mauris quis turpis");
