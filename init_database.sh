@@ -6,9 +6,8 @@ PORT=$2
 ID=$3
 PW=$4
 
-
+node run_query.js $IP $PORT $ID $PW "EXEC [master].[dbo].[rdsp_drop_database] N'myTable'"
 node create_database.js $1 $2 $3 $4
-
 node create_table.js $1 $2 $3 $4
 
 if [ -f ./sql/data_big.sql ]; then

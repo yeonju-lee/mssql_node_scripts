@@ -11,17 +11,15 @@ const query = args[6];
 var sql = require("mssql");
 
 var config = {
-	server: ip,
-	database: "hello",
-	authentication: {
-      type: "default",
-      options: {  
-      userName: user,
-	  password: pw,
-	  port: port
-	}
+    user: user,
+    password: pw,
+    server: ip,
+    port: parseInt(port),
+    options: {
+        encrypt: false,
+        enableArithAbort: true
     }
-  };
+};
 	
 	sql.connect(config, function (err) {
     
@@ -49,4 +47,4 @@ var config = {
         });
     });
 	
-	console.log("table myTable has benn created.");
+	console.log("databases myTable has benn deleted.");

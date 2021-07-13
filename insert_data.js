@@ -19,9 +19,14 @@ var config = {
     server: ip,
     port: parseInt(port),
     options: {
-        encrypt: true,
-        packetSize: 32768
-    }
+        encrypt: false,
+        enableArithAbort: true,
+     //   packetSize: 32768
+    },
+    pool: {
+        max: 30
+
+    },
 };
 
 
