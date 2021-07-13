@@ -15,7 +15,8 @@ var config = {
     server: ip,
     port: parseInt(port),
     options: {
-        encrypt: true
+        encrypt: false,
+        enableArithAbort: true
     }
 };
 

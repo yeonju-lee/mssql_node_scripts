@@ -14,7 +14,8 @@ var config = {
     server: ip,
     port: parseInt(port),
     options: {
-        encrypt: true
+        encrypt: false,
+        enableArithAbort: true
     }
 
 };
@@ -52,4 +53,4 @@ sql.connect(config, function (err) {
     });
 });
 
-console.log("table hello has benn created.");
+console.log("table myTable has benn created.");

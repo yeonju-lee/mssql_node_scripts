@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#set -x
-#set -e
+set -x
 
 IP=$1
 PORT=$2
