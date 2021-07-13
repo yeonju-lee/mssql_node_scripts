@@ -20,4 +20,4 @@ fi
 node insert_data.js $1 $2 $3 $4 1
 
 node delete_table.js $1 $2 $3 $4
-#node delete_database.js $1 $2 $3 $4
+node delete_database.js $1 $2 $3 $4
